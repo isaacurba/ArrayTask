@@ -9,11 +9,13 @@ public class TaskTwo {
 
     public static int[] reverseArray(int[] arr){
         int[] reverse = new int[arr.length];
-        int count = 0;
+//        int count = 0;
 
         for (int index = arr.length - 1; index >= 0; index--){
-            reverse[count] = arr[index];
-            count++;
+            reverse[arr.length - 1 - index] = arr[index];
+
+//      optimised by removing the count
+//            count++;
         }
         return reverse;
     }

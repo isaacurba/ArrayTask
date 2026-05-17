@@ -1,18 +1,25 @@
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class TaskOne {
 
     public static void main(String[] args){
-        System.out.print(Arrays.toString(inputCollectorToArray(10)));
+
+        int[] result = collectInput(10);
+
+        System.out.println(Arrays.toString(result));
     }
 
-    public static int[] inputCollectorToArray(int number){
+    public static int[] collectInput(int size){
+
         Scanner input = new Scanner(System.in);
-        int[] arr = new int[number];
-        for (int index = 0; index < arr.length; index++){
-            int digit = input.nextInt();
-            arr[index] = digit;
+
+        int[] numbers = new int[size];
+
+        for(int index = 0; index < numbers.length; index++){
+            numbers[index] = input.nextInt();
         }
-        return arr;
+
+        return numbers;
     }
 }
