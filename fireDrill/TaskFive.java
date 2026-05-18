@@ -23,5 +23,5 @@ public class TaskFive {
         int[] result = Arrays.copyOf(excludeDuplicate, nLength);
         return result;
     }
-}
+}// This logic worked cos its a sorted array 
 
